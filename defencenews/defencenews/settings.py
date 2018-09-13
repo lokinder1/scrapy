@@ -90,10 +90,12 @@ NEWSPIDER_MODULE = 'defencenews.spiders'
 
 #to add info in csv
 FEED_FORMAT = "csv"
-FEED_URI = "defencenews.csv"
+FEED_URI = "data.csv"
 
 #to download images locally
 ITEM_PIPELINES = {
   'scrapy.pipelines.images.ImagesPipeline': 1
 }
 IMAGES_STORE = 'images/'
+
+DOWNLOAD_HANDLERS = {'s3': None,}
